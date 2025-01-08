@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Funtion</title>
+</head>
+<body>
+    <h1>Async Funtion</h1>
+    <p>
+        This code snippet demonstrates the use of a Promise in JavaScript.
+        The `console.log(message);` statement is used to log the resolved value of the Promise to the console.
+        Promises are used to handle asynchronous operations in JavaScript, providing a way to work with asynchronous code more effectively.
+    </p>
+    <script>
+        async function myDisplay() {
+            let myPromise = new Promise(function(myResolve, myReject) {
+                    myResolve("I love You !!"); // when successful  
+                    myReject("I hate You !!"); // when error
+                });
+                try {
+                    let message = await myPromise;
+                    console.log(message);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+            myDisplay();
+    </script>  
+</body>
+
+</html>
